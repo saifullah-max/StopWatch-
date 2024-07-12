@@ -1,4 +1,4 @@
-.stopwatch {
+/* .stopwatch {
     height: 100vh;
     width: 23vw;
     background-color: #0d0c1b;
@@ -10,4 +10,50 @@
 }
 .container {
     background-color: rgb(186, 186, 186);
+}
+
+@media screen and (max-width: 490px) {
+    .stopwatch {
+        width: 60vw;
+        height: 80vh;
+        margin: 5rem;
+    }
+    .container {
+        height: calc(100vh - 5rem);
+    }
+} */
+ 
+
+
+.container {
+    background-color: rgb(186, 186, 186);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1px; 
+}
+
+.stopwatch {
+    /* height: calc(100% - 10rem);  */
+    height: 80vh;
+    width: 23vw;
+    background-color: #0d0c1b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 5rem auto;  */
+}
+
+@media screen and (max-width: 490px) {
+    .stopwatch {
+        width: 60vw;
+        height: calc(80vh - 10rem); /* Adjust height for small screens */
+    }
+    .container {
+        min-height: calc(100vh - 2rem); /* Subtract the margin-top value */
+        padding-top: 2rem; 
+    }
 }
